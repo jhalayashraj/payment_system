@@ -1,0 +1,6 @@
+.containter{align='center'}
+  .mt-3
+    - if flash[:notice].present?
+      .col-md-4.alert.alert-info = flash[:notice]
+    - if flash[:alert].present?
+      .col-md-4.alert.alert-danger = flash[:alert]

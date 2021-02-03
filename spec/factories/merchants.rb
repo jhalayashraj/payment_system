@@ -8,5 +8,16 @@ FactoryBot.define do
     password { SecureRandom.hex(6) }
     status { 'active' }
     total_transaction_sum { 10.0 }
+    role { 'merchant' }
+  end
+
+  factory :admin, class: 'Merchant' do
+    name { 'Admin' }
+    description { 'Admin description' }
+    email { 'admin@yopmail.com' }
+    password { SecureRandom.hex(6) }
+    status { 'active' }
+    total_transaction_sum { 10.0 }
+    role { 'admin' }
   end
 end

@@ -1,0 +1,19 @@
+= form_with(model: merchant, local: true) do |form|
+  - if merchant.errors.any?
+    #error_explanation
+      h2
+        = pluralize(merchant.errors.count, "error")
+        |  prohibited this merchant from being saved:
+      ul
+        - merchant.errors.full_messages.each do |message|
+          li
+            = message
+  .form-group
+    = form.label :name
+    = form.text_field :name, class: 'form-control'
+  .form-group
+    = form.label :description
+    = form.text_area :description, class: 'form-control'
+  .actions
+    = link_to 'Back', merchant_path, class: 'btn btn-primary mr-2'
+    = form.submit class: 'btn btn-primary'

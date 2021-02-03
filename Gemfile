@@ -7,6 +7,8 @@ ruby '3.0.0'
 
 # Devise for authentication
 gem 'devise'
+# Use Interactor for encapsulating the business logic
+gem 'interactor'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use postgresql as the database for Active Record
@@ -19,6 +21,8 @@ gem 'rails', '~> 6.1.1'
 gem 'rubocop', require: false
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Use slim templates
+gem 'slim-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -34,6 +38,8 @@ group :development, :test do
 end
 
 group :development do
+  # Use pry for debugging
+  gem 'pry'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
