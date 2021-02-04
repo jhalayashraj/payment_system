@@ -16,7 +16,7 @@
 
 - Added rake task for importing merchants and admins
 
-- Fasted bulk import using PG Copy (Next step would be integrating sidekiq for background jobs
+- Fasted bulk import using PG Copy (Next step would be integrating sidekiq for background jobs)
 
 ## Tech stack:
 * Rails 6.1.1
