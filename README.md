@@ -1,24 +1,30 @@
-# README
+## Payment System Task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Configured and added Rubocop
 
-Things you may want to cover:
+- Added Rspec
 
-* Ruby version
+- Added devise for authentication
 
-* System dependencies
+- Added validations and associations
 
-* Configuration
+- Added slim templates
 
-* Database creation
+- Added interactor for encapsulating the business logic
 
-* Database initialization
+- Added basic design for merchant and admin
 
-* How to run the test suite
+- Added rake task for importing merchants and admins using Postgres COPY
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tech stack:
+* Rails 6.1.1
+* Ruby 3.0.0
+* PostgreSQL
 
-* Deployment instructions
-
-* ...
+## Setup
+```
+rails db:create db:migrate db:seed
+rails s
+```
+To execute rake task for bulk merchant import run:
+`bundle exec rake merchants:bulk_import_merchants\['lib/tasks/import_merchants.csv'\]`
