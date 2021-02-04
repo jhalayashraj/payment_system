@@ -33,3 +33,6 @@ table.table.table.table-striped.table-bordered
         = link_to 'Edit', edit_merchant_path(merchant), class: 'btn btn-primary'
       td
         = link_to 'Destroy', merchant_path(merchant), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' unless merchant.transactions.present?
+
+.apple_pagination
+  = will_paginate @merchants, :container => false

@@ -6,7 +6,7 @@ class MerchantsController < ApplicationController
   before_action :find_merchant, only: %w[show edit update destroy]
 
   def index
-    @merchants = Merchant.ordered.includes(:transactions)
+    @merchants = Merchant.ordered.includes(:transactions).paginate(page: params[:page])
   end
 
   def update

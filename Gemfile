@@ -27,6 +27,8 @@ gem 'slim-rails'
 gem 'turbolinks', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
+# For pagination
+gem 'will_paginate', '~> 3.3.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

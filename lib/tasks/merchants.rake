@@ -8,7 +8,7 @@ namespace :merchants do
     return unless args[:file_path].present?
 
     p '--------------------Started Importing Merchants------------------------'
-    BulkMerchantImport.new(merchant_csv_file: args[:file_path]).start_bulk_import
+    BulkMerchantImportService.new(merchant_csv_file: args[:file_path]).start_bulk_import
     p '-------------------Completed Importing Merchants------------------------'
   end
 end

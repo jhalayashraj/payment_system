@@ -14,7 +14,9 @@
 
 - Added basic design for merchant and admin
 
-- Added rake task for importing merchants and admins using Postgres COPY
+- Added rake task for importing merchants and admins
+
+- Fasted bulk import using PG Copy (Next step would be integrating sidekiq for background jobs
 
 ## Tech stack:
 * Rails 6.1.1

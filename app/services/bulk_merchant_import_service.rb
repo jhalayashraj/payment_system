@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class BulkMerchantImport
+class BulkMerchantImportService
   attr_reader :file_name, :file_name_with_path
 
   def initialize(merchant_csv_file:)

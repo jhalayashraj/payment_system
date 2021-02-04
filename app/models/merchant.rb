@@ -19,4 +19,7 @@ class Merchant < ApplicationRecord
 
   ## Scope
   scope :ordered, -> { order('created_at') }
+
+  ## Pagination
+  self.per_page = 10
 end
