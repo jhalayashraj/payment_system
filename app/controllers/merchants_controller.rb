@@ -10,7 +10,7 @@ class MerchantsController < ApplicationController
   end
 
   def update
-    interactor = UpdateMerchant.call(merchant: @merchant, merchant_params: merchant_params)
+    interactor = Merchant::UpdateMerchant.call(merchant: @merchant, merchant_params: merchant_params)
 
     if interactor.success?
       redirect_to @merchant, notice: 'Merchant was successfully updated.'
@@ -21,7 +21,7 @@ class MerchantsController < ApplicationController
   end
 
   def destroy
-    RemoveMerchant.call(merchant: @merchant)
+    Merchant::RemoveMerchant.call(merchant: @merchant)
     redirect_to merchants_url, notice: 'Merchant was successfully destroyed.'
   end
 

@@ -11,6 +11,8 @@ gem 'devise'
 gem 'interactor'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# For API authentication
+gem 'jwt'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
