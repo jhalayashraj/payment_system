@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Merchant
+module Merchants
   # This interactor is used for removing the merchant
   class RemoveMerchant
     include Interactor

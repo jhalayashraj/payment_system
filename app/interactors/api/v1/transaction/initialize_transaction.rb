@@ -19,7 +19,8 @@ module Api
           if validate_reference_transaction(context.ref_transaction)
             assign_transaction_settings
           else
-            "Transactions::#{context.type}".constantize.new(uuid: context.transaction_params[:uuid], status: :error)
+            "Transactions::#{context.type}".constantize.new(uuid: context.transaction_params[:uuid], status: :error,
+                                                            merchant_id: context.transaction_params[:merchant_id])
           end
         end
 

@@ -29,6 +29,9 @@
             | Total Transaction Sum
           td
             = @merchant.total_transaction_sum
+
+  = render 'transactions', merchant: @merchant
+
 .row
   .col-md-12.text-center
     = link_to 'Merchants List', merchants_path, class: 'btn btn-primary mr-2' if current_merchant.admin?

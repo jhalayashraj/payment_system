@@ -1,0 +1,37 @@
+h2
+  | Transactions
+- if merchant.transactions.any?
+  table.table.table.table-striped.table-bordered
+    thead
+      tr
+        th
+          | Uuid
+        th
+          | Amount
+        th
+          | Status
+        th
+          | Customer Email
+        th
+          | Customer Phone
+        th
+          | Type
+    tbody
+      - merchant.transactions.each do |transaction|
+        tr
+
+        td
+          = transaction.uuid
+        td
+          = transaction.amount
+        td
+          = transaction.status.humanize
+        td
+          = transaction.customer_email
+        td
+          = transaction.customer_phone
+        td
+          = transaction.type
+- else
+  .h4.text-center
+    | No Transactions found!
