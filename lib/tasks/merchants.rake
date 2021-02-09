@@ -7,8 +7,7 @@ namespace :merchants do
   task :bulk_import_merchants, [:file_path] => :environment do |_, args|
     return unless args[:file_path].present?
 
-    p '--------------------Started Importing Merchants------------------------'
-    BulkMerchantImportService.new(merchant_csv_file: args[:file_path]).start_bulk_import
-    p '-------------------Completed Importing Merchants------------------------'
+    ImportMerchantJob.perform_later(file_path: args[:file_path])
+    p '-----------------Added Importing Merchants in background job------------------------'
   end
 end

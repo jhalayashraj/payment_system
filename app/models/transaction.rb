@@ -12,4 +12,7 @@ class Transaction < ApplicationRecord
   validates :customer_email, presence: true
   validates :status, inclusion: { in: statuses.keys }, presence: true
   validates :amount, numericality: { greater_than: 0 }, presence: true
+
+  ## Scope
+  scope :past_transactions, ->(period) { where('created_at < ?', period) }
 end

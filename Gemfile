@@ -23,6 +23,8 @@ gem 'rails', '~> 6.1.1'
 gem 'rubocop', require: false
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# For background processing
+gem 'sidekiq'
 # Use slim templates
 gem 'slim-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -31,6 +33,8 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 # For pagination
 gem 'will_paginate', '~> 3.3.0'
+# For cron jobs
+gem 'whenever', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
