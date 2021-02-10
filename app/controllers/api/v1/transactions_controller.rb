@@ -25,7 +25,7 @@ module Api
       end
 
       def find_referenced_transaction
-        @ref_transaction = @current_merchant.transactions.find_by(id: params[:transaction_id])
+        @ref_transaction = @current_merchant.transactions.find_by(id: transaction_params[:transaction_id])
       end
     end
   end

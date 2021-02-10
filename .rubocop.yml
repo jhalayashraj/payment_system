@@ -2244,6 +2244,7 @@ Metrics/BlockLength:
     - refine
   Exclude:
     - '**/*.gemspec'
+    - 'spec/**/*'
 
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting.'
@@ -2281,7 +2282,7 @@ Metrics/MethodLength:
   VersionAdded: '0.25'
   VersionChanged: '1.5'
   CountComments: false  # count full line comments?
-  Max: 10
+  Max: 11
   CountAsOne: []
   ExcludedMethods: [] # deprecated, retained for backwards compatibility
   IgnoredMethods: []
@@ -3158,7 +3159,7 @@ Style/DocumentDynamicEvalDefinition:
 
 Style/Documentation:
   Description: 'Document classes and non-namespace modules.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.9'
   Exclude:
     - 'spec/**/*'

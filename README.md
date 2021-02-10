@@ -16,7 +16,13 @@
 
 - Added rake task for importing merchants and admins
 
-- Fasted bulk import using PG Copy (Next step would be integrating sidekiq for background jobs)
+- Fasted bulk import using PG Copy
+
+- Added JWT for API authentication
+
+- Added Whenever for cron job
+
+- Added Sidekiq for background processing
 
 ## Tech stack:
 * Rails 6.1.1
@@ -30,3 +36,6 @@ rails s
 ```
 To execute rake task for bulk merchant import run:
 `bundle exec rake merchants:bulk_import_merchants\['lib/tasks/import_merchants.csv'\]`
+
+## APIs
+* Postman Document: https://documenter.getpostman.com/view/12376574/TW77gim3
