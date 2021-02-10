@@ -39,3 +39,6 @@ To execute rake task for bulk merchant import run:
 
 ## APIs
 * Postman Document: https://documenter.getpostman.com/view/12376574/TW77gim3
+* Endpoints:
+    - XML: http://localhost:3000/api/v1/transactions.xml
+    - JSON: http://localhost:3000/api/v1/transactions
