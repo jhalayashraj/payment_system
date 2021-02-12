@@ -6,6 +6,10 @@ module Api
       before_action :authenticate_request
       protect_from_forgery prepend: true
 
+      rescue_from Exception, with: :server_error
+      rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+      rescue_from ActionController::MethodNotAllowed, with: :method_not_allowed
+
       private
 
       def authenticate_request
@@ -15,6 +19,19 @@ module Api
         else
           render json: { error: interactor.error }, status: 401
         end
+      end
+
+      def server_error(exception)
+        Rails.logger.error(exception)
+        render json: { message: 'Internal server error' }, status: :internal_server_error
+      end
+
+      def record_not_found
+        render json: { message: 'The requested resource was not found' }, status: :not_found
+      end
+
+      def method_not_allowed
+        render json: { error: 'method not allowed' }, status: :method_not_allowed
       end
     end
   end

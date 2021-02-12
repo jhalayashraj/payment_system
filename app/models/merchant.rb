@@ -15,7 +15,6 @@ class Merchant < ApplicationRecord
   ## Validations
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :status, inclusion: { in: statuses.keys }
 
   ## Scope
   scope :ordered, -> { order('created_at') }
